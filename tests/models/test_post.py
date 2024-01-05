@@ -10,4 +10,6 @@ def post_published():
 
 @pytest.mark.django_db
 def test_create_published_post(post_published):
-    assert post_published.title == 'pytest with factorys'
+    assert post_published.title == 'pytest with factory'
+    assert response.content == b'Hello World'
+    
